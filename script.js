@@ -10,7 +10,7 @@ document.addEventListener("mousemove", (e) => {
 
   const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
   const eyes = document.querySelectorAll(".eye");
-
+  audio.play();
   eyes.forEach((eye) => {
     eye.style.transform = `rotate(${90 + angleDeg}deg)`;
     anchor.style.filter = `hue-rotate(${angleDeg}deg)`;
@@ -18,7 +18,7 @@ document.addEventListener("mousemove", (e) => {
   });
 });
 
-audio.play();
+
 
 function angle(cx, cy, ex, ey) {
   const dy = ey - cy;
